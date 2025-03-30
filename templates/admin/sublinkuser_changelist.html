@@ -1,0 +1,27 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+
+{% block object-tools %}
+<div style="margin-bottom: 1rem;">
+  <a href="{% url 'admin:sync-invoice-users' %}" class="button">1️⃣ Sync Invoice Users</a>
+  <a href="#" class="button" onclick="submitSelectedUsers()">2️⃣ Update Selected Users</a>
+  <a href="{% url 'admin:sync-and-update-users' %}" class="button">3️⃣ Sync & Update All Users</a>
+</div>
+{{ block.super }}
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<script>
+  function submitSelectedUsers() {
+    const selected = [...document.querySelectorAll('input.action-select:checked')];
+    const users = selected.map(row => row.closest('tr').querySelector('th').textContent.trim());
+    if (users.length === 0) {
+      alert("Please select at least one user.");
+      return;
+    }
+    const url = `{% url 'admin:update-selected-users' %}?users=${encodeURIComponent(users.join(","))}`;
+    window.location.href = url;
+  }
+</script>
+{% endblock %}

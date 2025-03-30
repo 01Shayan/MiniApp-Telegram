@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Flowbite default theme (optional, only if you want to override or use their tokens) */
+@import "flowbite/src/themes/default";
+/* Flowbite plugin styles */
+@import "flowbite";
+

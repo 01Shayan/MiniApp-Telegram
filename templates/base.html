@@ -1,0 +1,40 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% tailwind_css %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@..." rel="stylesheet" />
+  <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet" />
+  <title>{% block title %}Telegram Mini App{% endblock %}</title>
+</head>
+
+<body class="bg-zinc-900 text-zinc-200">
+
+  {% block content %}
+  {% endblock %}
+
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/download/mercury-planet-wallpapers-wp4047298');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+
+</body>
+
+<script src="{% static 'js/app.js' %}"></script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script> -->
+<!-- <script src="{% static 'js/flowbite.min.js' %}"></script> -->
+<!-- <script src="./node_modules/clipboard/dist/clipboard.min.js"></script> -->
+<!-- <script src="./node_modules/preline/dist/helper-clipboard.js"></script> -->
+
+</html>
