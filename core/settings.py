@@ -87,6 +87,9 @@ DATABASES = {
         "PASSWORD": os.getenv("DB_PASSWORD"),
         "HOST": os.getenv("DB_HOST", "localhost"),
         "PORT": os.getenv("DB_PORT", "3306"),
+        "OPTIONS": {
+            "charset": "utf8mb4",
+        },
     },
     "mirzabot": {
         "ENGINE": "django.db.backends.mysql",
@@ -108,10 +111,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = os.getenv('LANG', 'en-us')
+# LANGUAGE_CODE = os.getenv('LANG', 'en-us')
 TIME_ZONE = os.getenv('TIME_ZONE', 'UTC')
-USE_I18N = True
-USE_TZ = True
+# USE_I18N = True
+# USE_TZ = True
 
 # --- Static / Media
 STATIC_URL = "/static/"

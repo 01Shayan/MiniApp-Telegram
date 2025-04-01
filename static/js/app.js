@@ -63,17 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="flex items-center">
                   <!-- Username field -->
                   <span
-                    class="shrink-0 z-10 inline-flex items-center py-2.5 px-2 text-sm font-medium text-center text-zinc-900 bg-zinc-400 rounded-s-lg border border-zinc-200">
+                    class="shrink-0 z-10 inline-flex items-center py-2.5 px-2 text-sm font-medium text-center text-zinc-900 bg-gray-500 rounded-s-lg border border-zinc-200">
                     ${entry.username || "Unknown User"}</span>
                   <!-- Link field -->
                   <div class="relative w-full">
                     <input id="${uniqueId}" type="text"
-                      class="bg-zinc-200 border border-e-0 border-zinc-300 text-zinc-600 text-sm border-s-0 block w-full p-2.5"
+                      class="bg-zinc-200 border border-e-0 border-zinc-300 text-gray-500 text-sm border-s-0 block w-full p-2.5"
                       value="${entry.link}" readonly />
                   </div>
                   <!-- Copy button -->
                   <button data-tooltip-target="${uniqueTooltipId}" data-copy-to-clipboard-target="${uniqueId}"
-                    class="shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-zinc-900 hover:text-zinc-700 bg-zinc-400 border border-zinc-200 rounded-e-lg"
+                    class="shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-zinc-900 hover:text-zinc-700 bg-zinc-300 border border-zinc-200 rounded-e-lg"
                     type="button">
                     <span class="default-icon">
                       <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
